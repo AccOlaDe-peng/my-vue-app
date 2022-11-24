@@ -3,10 +3,11 @@
  * @author: pengrenchang
  * @Date: 2022-11-24 10:32:59
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-24 10:32:59
+ * @LastEditTime: 2022-11-24 13:46:17
  */
 import { createApp } from "vue";
-import "./style.css";
 import App from "./App.vue";
+import "./style.css";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+app.mount("#app");
