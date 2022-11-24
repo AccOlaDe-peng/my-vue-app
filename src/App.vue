@@ -3,17 +3,17 @@
  * @author: pengrenchang
  * @Date: 2022-11-24 10:33:06
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-24 12:02:58
+ * @LastEditTime: 2022-11-24 15:13:02
 -->
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "./components/HelloWorld.vue";
 import dayjs from "dayjs";
 import { ref } from "vue";
-import { $ref } from "vue/macros";
+import { $$, $ref } from "vue/macros";
 const data = ref("");
 let count = $ref(0);
+console.log(count);
 setInterval(() => {
     data.value = dayjs(`${new Date()}`).format("HH:mm:ss");
     count++;
@@ -31,7 +31,10 @@ setInterval(() => {
     </div>
     <div>{{ data }}</div>
     <div>{{ count }}</div>
-    <!-- <HelloWorld msg="Vite + Vue" /> -->
+    <div class="example">
+        <a-pagination :total="50" show-size-changer />
+    </div>
+    <a-button type="primary">Primary Button</a-button>
 </template>
 
 <style scoped>
