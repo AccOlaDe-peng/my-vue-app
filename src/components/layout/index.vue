@@ -1,10 +1,23 @@
-<!-- <!--
+<!--
  * @description: 
  * @author: pengrenchang
  * @Date: 2022-11-24 18:10:12
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-24 18:32:22
+ * @LastEditTime: 2022-11-25 11:16:38
 -->
+<script setup lang="ts">
+import {
+    UserOutlined,
+    VideoCameraOutlined,
+    UploadOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+} from "@ant-design/icons-vue";
+import { defineProps, ref } from "vue";
+import { $ref } from "vue/macros";
+
+const collapsed = $ref(false);
+</script>
 <template>
     <a-layout>
         <a-layout-sider
@@ -12,8 +25,8 @@
             :trigger="null"
             collapsible
         >
-            <div class="logo" />
-            <a-menu
+            <!-- <div class="logo" /> -->
+            <!-- <a-menu
                 v-model:selectedKeys="selectedKeys"
                 theme="dark"
                 mode="inline"
@@ -30,20 +43,20 @@
                     <upload-outlined />
                     <span>nav 3</span>
                 </a-menu-item>
-            </a-menu>
+            </a-menu> -->
         </a-layout-sider>
         <a-layout>
             <a-layout-header style="background: #fff; padding: 0">
-                <menu-unfold-outlined
+                <!-- <menu-unfold-outlined
                     v-if="collapsed"
                     class="trigger"
                     @click="() => (collapsed = !collapsed)"
-                />
-                <menu-fold-outlined
+                /> -->
+                <!-- <menu-fold-outlined
                     v-else
                     class="trigger"
                     @click="() => (collapsed = !collapsed)"
-                />
+                /> -->
             </a-layout-header>
             <a-layout-content
                 :style="{
@@ -58,21 +71,10 @@
         </a-layout>
     </a-layout>
 </template>
-<script setup lang="ts">
-import {
-    UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
-} from "@ant-design/icons-vue";
-import { defineProps, ref } from "vue";
-defineProps({
-    selectedKeys: ref<string[]>(["1"]),
-    collapsed: ref<boolean>(false),
-});
-</script>
-<style>
+<style scoped>
+.ant-layout.ant-layout-has-sider {
+    height: 100%;
+}
 #components-layout-demo-custom-trigger .trigger {
     font-size: 18px;
     line-height: 64px;
@@ -95,4 +97,3 @@ defineProps({
     background: #fff;
 }
 </style>
--->

@@ -3,38 +3,31 @@
  * @author: pengrenchang
  * @Date: 2022-11-24 10:33:06
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-24 18:42:42
+ * @LastEditTime: 2022-11-25 11:02:12
 -->
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import dayjs from "dayjs";
-import Layout from "./components/layout/index.vue";
-import { ref } from "vue";
 import { $ref } from "vue/macros";
-const data = ref("");
-let count = $ref(0);
-console.log(count);
-setInterval(() => {
-    data.value = dayjs(`${new Date()}`).format("HH:mm:ss");
-    count++;
-}, 1000);
+import enUS from "ant-design-vue/es/locale/en_US";
+import zhCN from "ant-design-vue/es/locale/zh_CN";
+import Layout from "./components/layout/index.vue";
+import { useLocalStore } from "./store/local";
+const lang = useLocalStore();
+const getPopupContainer = (el: any, dialogContext: any) => {
+    if (dialogContext) {
+        return dialogContext.getDialogWrap();
+    } else {
+        return document.body;
+    }
+};
 </script>
 
 <template>
-    <!-- <Layout collapsed="true" selectedKeys="[se]"> -->
+    <a-config-provider
+        :getPopupContainer="getPopupContainer"
+        :locale="lang.local === 'en' ? enUS : zhCN"
+    >
+        <Layout />
+    </a-config-provider>
 </template>
 
-<style scoped>
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-}
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-    filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
