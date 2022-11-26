@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 import { ElConfigProvider } from 'element-plus'
-import { useLocaleStore } from "./store/local";
+import { useLocaleStore } from "./store/locale";
 const localeStore = useLocaleStore();
 
 const handleSizeChange = (val: number) =>  {

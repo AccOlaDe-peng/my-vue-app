@@ -8,5 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElPagination: typeof import('element-plus/es')['ElPagination']
+    Layout: typeof import('./src/components/layout/index.vue')['default']
   }
 }
