@@ -6,28 +6,32 @@
  * @LastEditTime: 2022-11-25 16:30:49
 -->
 <script setup lang="ts">
-import { $ref } from "vue/macros";
-import enUS from "ant-design-vue/es/locale/en_US";
-import zhCN from "ant-design-vue/es/locale/zh_CN";
-import Layout from "./components/layout/index.vue";
-import { useLocalStore } from "./store/local";
-const lang = useLocalStore();
-const getPopupContainer = (el: any, dialogContext: any) => {
-    if (dialogContext) {
-        return dialogContext.getDialogWrap();
-    } else {
-        return document.body;
-    }
-};
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
+import { ElConfigProvider } from 'element-plus'
+import { useLocaleStore } from "./store/local";
+const localeStore = useLocaleStore();
+
+const handleSizeChange = (val: number) =>  {
+        console.log(`每页 ${val} 条`);
+      }
+     const  handleCurrentChange = (val: number) => {
+        console.log(`当前页: ${val}`);
+      }
+      const currentPage1 = 1
+
 </script>
 
 <template>
-    <a-config-provider
-        :getPopupContainer="getPopupContainer"
-        :locale="lang.local === 'en' ? enUS : zhCN"
-    >
-        <Layout />
-    </a-config-provider>
+    <el-config-provider :locale="zhCn">
+        <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page.sync="currentPage1"
+      :page-size="100"
+      layout="total, prev, pager, next"
+      :total="1000">
+    </el-pagination>
+    </el-config-provider>
 </template>
 
 <style scoped></style>

@@ -9,11 +9,11 @@ import { defineStore } from "pinia";
 
 type localType = "zh" | "en";
 
-export const useLocalStore = defineStore("lang", {
-    state: () => ({ local: "zh" }),
-    actions: {
-        setLocal(v: localType) {
-            this.local = v;
-        },
-    },
+export const useLocaleStore = defineStore("localeStore", {
+	state: () => ({ locale: "zh" }),
+	actions: {
+		setLocal(v: localType) {
+			this.locale = v;
+		},
+	},
 });

@@ -6,6 +6,7 @@
  * @LastEditTime: 2022-11-25 11:06:47
  */
 import { createApp } from "vue";
+// import ElementPlus from 'element-plus'
 import App from "./App.vue";
 import { createPinia } from "pinia";
 import "./style.less";
@@ -13,5 +14,6 @@ import "./style.less";
 const pinia = createPinia();
 const app = createApp(App);
 
+// app.use(ElementPlus);
 app.use(pinia);
 app.mount("#app");
