@@ -6,17 +6,19 @@ import '@vue/runtime-core'
 export {}
 
 declare module '@vue/runtime-core' {
-    export interface GlobalComponents {
-        ElAside: typeof import('element-plus/es')['ElAside']
-        ElContainer: typeof import('element-plus/es')['ElContainer']
-        ElHeader: typeof import('element-plus/es')['ElHeader']
-        ElIcon: typeof import('element-plus/es')['ElIcon']
-        ElMain: typeof import('element-plus/es')['ElMain']
-        ElMenu: typeof import('element-plus/es')['ElMenu']
-        ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
-        ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
-        ElPagination: typeof import('element-plus/es')['ElPagination']
-        ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
-        Layout: typeof import('./src/components/layout/index.vue')['default']
-    }
+  export interface GlobalComponents {
+    ElAside: typeof import('element-plus/es')['ElAside']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
+    ElPagination: typeof import('element-plus/es')['ElPagination']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    Layout: typeof import('./src/components/layout/index.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+  }
 }

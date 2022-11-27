@@ -5,15 +5,20 @@
  * @LastEditors: pengrenchang
  * @LastEditTime: 2022-11-25 11:06:47
  */
-import { createApp } from 'vue'
-// import ElementPlus from 'element-plus'
 import App from './App.vue'
+import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import './style.less'
+import router, { setupRouter } from './router'
+import './styles/index.scss'
 
-const pinia = createPinia()
 const app = createApp(App)
 
-// app.use(ElementPlus);
+const pinia = createPinia()
+
+setupRouter(app) // 引入路由
+
 app.use(pinia)
-app.mount('#app')
+
+router.isReady().then(() => {
+    app.mount('#app')
+})
