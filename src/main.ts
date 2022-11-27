@@ -5,7 +5,7 @@
  * @LastEditors: pengrenchang
  * @LastEditTime: 2022-11-25 11:06:47
  */
-import App from './App.vue'
+import App from './App'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import router, { setupRouter } from './router'
