@@ -50,7 +50,7 @@
                 </el-form-item>
                 <el-checkbox
                     v-model="loginForm.rememberMe"
-                    style="margin: 0px 0px 25px 0px"
+                    style="margin: 0px 0px 18px 0px"
                 >
                     记住密码
                 </el-checkbox>
@@ -219,7 +219,7 @@
                 border-radius: 6px;
                 background: #ffffff;
                 width: 400px;
-                padding: 25px 25px 5px 25px;
+                padding: 25px 25px 25px 25px;
                 .el-input {
                     height: 38px;
                     input {
