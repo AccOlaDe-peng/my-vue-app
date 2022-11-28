@@ -3,11 +3,12 @@
  * @author: pengrenchang
  * @Date: 2022-11-24 10:30:28
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-24 13:45:51
+ * @LastEditTime: 2022-11-28 10:28:35
  */
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -18,7 +19,7 @@ const resolve = (dir: string) => path.join(__dirname, dir)
 export default defineConfig({
     plugins: [
         vue({ reactivityTransform: true }),
-
+        vueJsx(),
         AutoImport({
             resolvers: [ElementPlusResolver()]
         }),

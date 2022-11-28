@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <template v-for="(val,index) in chils"
             :key="index">
     <el-submenu :index="resolvePath(val.path)"
@@ -69,4 +69,4 @@ export default defineComponent({
     }
   }
 })
-</script>
+</script> -->

@@ -1,4 +1,11 @@
-<template>
+<!--
+ * @description: 
+ * @author: pengrenchang
+ * @Date: 2022-11-28 10:05:28
+ * @LastEditors: pengrenchang
+ * @LastEditTime: 2022-11-28 10:05:28
+-->
+<!-- <template>
   <el-menu router
            background-color="transparent"
            :collapse="setIsCollapse"
@@ -88,4 +95,4 @@ export default defineComponent({
     }
   }
 })
-</script>
+</script> -->
