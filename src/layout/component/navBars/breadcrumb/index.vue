@@ -1,4 +1,11 @@
-<template>
+<!--
+ * @description: 
+ * @author: pengrenchang
+ * @Date: 2022-11-28 14:02:04
+ * @LastEditors: pengrenchang
+ * @LastEditTime: 2022-11-28 14:02:04
+-->
+<!-- <template>
   <div class="layout-navbars-breadcrumb-index">
     <Breadcrumb />
   </div>
@@ -75,4 +82,4 @@ export default {
   overflow: hidden;
   border-bottom: 1px solid #f1f2f3;
 }
-</style>
+</style> -->

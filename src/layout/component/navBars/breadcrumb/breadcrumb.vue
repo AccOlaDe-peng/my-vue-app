@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="layout-navbars-breadcrumb"
        v-show="getThemeConfig.isBreadcrumb">
     <div style="flex:6;display: flex;align-items: center;height:100%;">
@@ -245,4 +245,4 @@ export default {
     color: var(--bg-topBarColor);
   }
 }
-</style>
+</style> -->

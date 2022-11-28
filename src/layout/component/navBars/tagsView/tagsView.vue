@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="layout-navbars-tagsview"
        :class="{
       'layout-navbars-tagsview-shadow': getThemeConfig.layout === 'classic'
@@ -440,4 +440,4 @@ export default {
 .layout-navbars-tagsview-shadow {
   box-shadow: rgb(0 21 41 / 4%) 0px 1px 4px;
 }
-</style>
+</style> -->

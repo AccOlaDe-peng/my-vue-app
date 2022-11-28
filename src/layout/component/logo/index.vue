@@ -1,4 +1,11 @@
-<template>
+<!--
+ * @description: 
+ * @author: pengrenchang
+ * @Date: 2022-11-28 14:02:14
+ * @LastEditors: pengrenchang
+ * @LastEditTime: 2022-11-28 14:02:14
+-->
+<!-- <template>
   <div class="layout-logo"
        v-if="!setShowLogo"
        @click="goHome">
@@ -91,4 +98,4 @@ export default {
     }
   }
 }
-</style>
+</style> -->

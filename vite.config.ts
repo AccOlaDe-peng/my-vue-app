@@ -3,7 +3,7 @@
  * @author: pengrenchang
  * @Date: 2022-11-24 10:30:28
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-28 10:28:35
+ * @LastEditTime: 2022-11-28 14:08:04
  */
 import path from 'path'
 import { defineConfig } from 'vite'
@@ -30,10 +30,9 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': resolve('src'),
-            comps: resolve('src/components'),
-            apis: resolve('src/apis'),
+            '@comps': resolve('src/components'),
             views: resolve('src/views'),
-            store: resolve('src/store'),
+            '@/store': resolve('src/store'),
             router: resolve('src/router'),
             styles: resolve('src/styles')
         }

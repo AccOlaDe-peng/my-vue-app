@@ -6,59 +6,59 @@ const routerHistory = createWebHashHistory()
 // createWebHistory history 路由
 // createMemoryHistory 带缓存 history 路由
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('../layout/index.vue')
 
 export const constantRoutes = [
-    // {
-    //     path: '/',
-    //     name: 'root',
-    //     component: Layout
-    //     // redirect: '/home',
-    //     // children: [
-    //     //     {
-    //     //         path: '/home',
-    //     //         name: 'home',
-    //     //         component: () => import('views/home/index.vue'),
-    //     //         meta: {
-    //     //             auth: ['admin', 'test'],
-    //     //             icon: 'carbon:rule-test',
-    //     //             isAffix: true,
-    //     //             isHide: false,
-    //     //             isKeepAlive: true,
-    //     //             title: '首页',
-    //     //             index: '1'
-    //     //         }
-    //     //     },
-    //     //     {
-    //     //         path: '/demo',
-    //     //         name: 'demo',
-    //     //         component: () => import('views/demo/index.vue'),
-    //     //         meta: {
-    //     //             auth: ['admin', 'test'],
-    //     //             icon: 'carbon:rule-test',
-    //     //             isAffix: false,
-    //     //             isHide: false,
-    //     //             isKeepAlive: true,
-    //     //             title: '数据双向绑定案例',
-    //     //             index: '2'
-    //     //         }
-    //     //     },
-    //     //     {
-    //     //         path: '/elementIcon',
-    //     //         name: 'elementIcon',
-    //     //         component: () => import('views/elementIcon/index.vue'),
-    //     //         meta: {
-    //     //             auth: ['admin', 'test'],
-    //     //             icon: 'carbon:rule-test',
-    //     //             isAffix: false,
-    //     //             isHide: false,
-    //     //             isKeepAlive: true,
-    //     //             title: 'elementIcon案例',
-    //     //             index: '4'
-    //     //         }
-    //     //     }
-    //     // ]
-    // },
+    {
+        path: '/',
+        name: 'root',
+        component: Layout
+        // redirect: '/home',
+        // children: [
+        //     {
+        //         path: '/home',
+        //         name: 'home',
+        //         component: () => import('views/home/index.vue'),
+        //         meta: {
+        //             auth: ['admin', 'test'],
+        //             icon: 'carbon:rule-test',
+        //             isAffix: true,
+        //             isHide: false,
+        //             isKeepAlive: true,
+        //             title: '首页',
+        //             index: '1'
+        //         }
+        //     },
+        //     {
+        //         path: '/demo',
+        //         name: 'demo',
+        //         component: () => import('views/demo/index.vue'),
+        //         meta: {
+        //             auth: ['admin', 'test'],
+        //             icon: 'carbon:rule-test',
+        //             isAffix: false,
+        //             isHide: false,
+        //             isKeepAlive: true,
+        //             title: '数据双向绑定案例',
+        //             index: '2'
+        //         }
+        //     },
+        //     {
+        //         path: '/elementIcon',
+        //         name: 'elementIcon',
+        //         component: () => import('views/elementIcon/index.vue'),
+        //         meta: {
+        //             auth: ['admin', 'test'],
+        //             icon: 'carbon:rule-test',
+        //             isAffix: false,
+        //             isHide: false,
+        //             isKeepAlive: true,
+        //             title: 'elementIcon案例',
+        //             index: '4'
+        //         }
+        //     }
+        // ]
+    },
     {
         path: '/login',
         name: 'login',
