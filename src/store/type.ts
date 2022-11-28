@@ -3,7 +3,7 @@
  * @author: pengrenchang
  * @Date: 2022-11-28 13:40:27
  * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-28 16:07:55
+ * @LastEditTime: 2022-11-28 17:21:31
  */
 
 import { defineComponent } from 'vue'
@@ -59,4 +59,17 @@ export interface Menu {
     meta: Partial<RouteMeta>
     component?: Component | string
     children?: Menu[]
+}
+
+// @ts-ignore
+export interface AppRouteRecordRaw extends Omit<RouteRecordRaw, 'meta'> {
+    name: string
+    meta: RouteMeta
+    component?: Component | string
+    components?: Component
+    children?: AppRouteRecordRaw[]
+    props?: Recordable
+    fullPath?: string
+    query?: Partial<Recordable> | undefined
+    redirect?: string
 }
