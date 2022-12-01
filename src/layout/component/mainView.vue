@@ -1,11 +1,4 @@
-<!--
- * @description: 
- * @author: pengrenchang
- * @Date: 2022-11-28 14:02:33
- * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-28 14:02:33
--->
-<!-- <template>
+<template>
   <div class="h100" style="padding-top: 90px;">
     <router-view v-slot="{ Component }">
       <transition :name="setTransitionName" mode="out-in">
@@ -86,4 +79,4 @@
       }
     }
   })
-</script> -->
+</script>

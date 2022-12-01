@@ -1,11 +1,4 @@
-<!--
- * @description: 
- * @author: pengrenchang
- * @Date: 2022-11-28 14:02:54
- * @LastEditors: pengrenchang
- * @LastEditTime: 2022-11-28 14:02:54
--->
-<!-- <template>
+<template>
   <el-header class="layout-header"
              height="50"
              :style="{'position': 'fixed','width': '100%','z-index': '2','padding':'0',
@@ -50,4 +43,4 @@ export default {
   }
 }
 </script>
- -->
+
