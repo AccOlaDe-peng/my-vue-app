@@ -109,7 +109,7 @@
         RouteRecordRaw,
         onBeforeRouteLeave
     } from 'vue-router'
-    import avatar from '@/assets/image/profile.jpg'
+    import avatar from '../../../../assets/image/profile.jpg'
     import { useConfigStore } from '../../../../store/user'
     import { AppRouteRecordRaw } from '../../../../store/type'
     import { usePermissionStore } from '../../../../store/permission'
